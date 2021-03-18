@@ -1,0 +1,15 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node /usr/lib/node_modules/parcel-bundler/bin/cli.js index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^4.1.1"
+  }
+}
