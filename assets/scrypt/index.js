@@ -1,6 +1,6 @@
 
 //inputData()
-
+let fs = require('fs')
 function inputData(){
     var cards = [
         {value: document.forms["form"].elements["card-1"].value, in: document.forms["form"].elements["type-1"].value},
@@ -40,6 +40,8 @@ function inputData(){
     console.log(cards, values)
     if(cards[0].legit == 1 && cards[1].legit == 1 && cards[2].legit == 1 && cards[3].legit == 1 && cards[4].legit == 1){
         check(cards)
+       
+        
     }
     else{
         document.querySelector("p.status").innerHTML = "В комбинации допущены ошибки"
@@ -99,7 +101,37 @@ function check(cards, values){
         combo[0].flashRoyal = 1
     }
 
-   console.log(combo) 
+    let currentDate = new Date()
+        if(combo[0].flashRoyal == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Флеш Рояль"
+        }
+        else if(combo[0].streetFlash == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Стрит Флеш"
+        }
+        else if(combo[0].kare == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Каре"
+        }
+        else if(combo[0].fullHouse == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Фулл Хаус"
+        }
+        else if(combo[0].flash == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Флеш"
+        }
+        else if(combo[0].street == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Стрит"
+        }
+        else if(combo[0].set == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Сет"
+        }
+        else if(combo[0].dpair == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Две пары"
+        }
+        else if(combo[0].pair == 1){
+            document.querySelector("p.status").innerHTML = "Старшая комбинация: Пара"
+        }
+        else{
+            document.querySelector("p.status").innerHTML = "Комбинаций нет"
+        }
 }
 window.inputData = inputData
 console.log("Вимкнено")
