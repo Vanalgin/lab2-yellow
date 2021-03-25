@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab2, Parcel</title>
+    <title>Poker combo</title>
    <!-- <link rel="stylesheet" href="./css/style.less">-->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 </head>
 <body>
-    <p>Ваша комбинация содержит:</p>
+    <p class="status">Введите комбинацию и нажмите на кнопку</p>
     <div class="container-fluid margin-center">
         <hr>
-        <form>
+        <form id="form">
             <table class="table table-borderless" >
                 <tbody style="text-align: center; font-size: 26pt;">
                     <tr style="font-size: 48pt; text-align: center;">
-                        <td class="card-1"><input name="card-1" type="text" style="width: 60px;"></td>
-                        <td class="card-2"><input name="card-2" type="text" style="width: 60px"></td>
-                        <td class="card-3"><input name="card-3" type="text" style="width: 60px"></td>
-                        <td class="card-4"><input name="card-4" type="text" style="width: 60px"></td>
-                        <td class="card-5"><input name="card-5" type="text" style="width: 60px"></td>
+                        <td class="card-1"><input name="card-1" type="text" style="width: 100px;"></td>
+                        <td class="card-2"><input name="card-2" type="text" style="width: 100px"></td>
+                        <td class="card-3"><input name="card-3" type="text" style="width: 100px"></td>
+                        <td class="card-4"><input name="card-4" type="text" style="width: 100px"></td>
+                        <td class="card-5"><input name="card-5" type="text" style="width: 100px"></td>
                     </tr>
                     <tr>
                         <td>
@@ -69,9 +69,14 @@
                 </tbody>
             </table>
             <hr>
-            <button>Искать комбинации</button>
+            <button type = "button" class="button" onclick="inputData()">Искать комбинации</button>
         </form>
-
+    <br>
+    <p>Синтаксис:</p>
+    <ul>
+        <ol>Только цифры и заглавные буквы карт на латинице(J, Q, K, A)</ol>
+    </ul>
     </div>
+<script type="text/javascript" src="assets/scrypt/index.js"></script>
 </body>
 </html>
